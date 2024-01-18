@@ -82,13 +82,122 @@ void main (List<String> args){
   // }
 
   //nomor 3 conditional
-  print("masukkan hari : ");
-  String hari = stdin.readLineSync()!;
-  switch(hari){
-    case 'senin' :
-    {
-    print("Segala sesuatu memiliki kesudahan, yang sudah berakhir biarlah berlalu dan yakinlah semua akan baik-baik saja.");
-    }
-    break;
-  }
+  // print("masukkan hari : ");
+  // String hari = stdin.readLineSync()!;
+  // switch(hari){
+  //   case 'senin' :
+  //   {
+  //   print("Segala sesuatu memiliki kesudahan, yang sudah berakhir biarlah berlalu dan yakinlah semua akan baik-baik saja.");
+  //   }
+  //   break;
+  //   case 'selasa' :
+  //   {
+  //   print("Setiap detik sangatlah berharga karena waktu mengetahui banyak hal, termasuk rahasia hati.");
+  //   }
+  //   break;
+  //   case 'rabu' :
+  //   {
+  //   print("Jika kamu tak menemukan buku yang kamu cari di rak, maka tulislah sendiri.");
+  //   }
+  //   break;
+  //   case 'kamis' :
+  //   {
+  //   print("Jika hatimu banyak merasakan sakit, maka belajarlah dari rasa sakit itu untuk tidak memberikan rasa sakit pada orang lain.");
+  //   }
+  //   break;
+  //   case 'jumat' :
+  //   {
+  //   print("Hidup tak selamanya tentang pacar.");
+  //   }
+  //   break;
+  //   case 'sabtu' :
+  //   {
+  //   print("Rumah bukan hanya sebuah tempat, tetapi itu adalah perasaan.");
+  //   }
+  //   break;
+  //   case 'minggu' :
+  //   {
+  //   print("Hanya seseorang yang takut yang bisa bertindak berani. Tanpa rasa takut itu tidak ada apapun yang bisa disebut berani.");
+  //   }
+  //   break;
+  // }
+
+  //nomor 4 conditional
+  // var tanggal = 21; 
+  // var bulan = 1; 
+  // var tahun = 1945;
+  // if (tanggal >=1 && tanggal <= 31){
+  //   if(tahun >=1900 && tahun <= 2200){
+  //     switch(bulan){
+  //       case 1 :
+  //       {
+  //         var namabulan = 'januari';
+  //       }
+  //       break;
+  //       case 2 :
+  //       {
+  //         var namabulan = 'Februari';
+  //       }
+  //       break;
+  //       case 3 :
+  //       {
+  //         var namabulan = 'Maret';
+  //       }
+  //       break;
+  //       case 4 :
+  //       {
+  //         var namabulan = 'April';
+  //       }
+  //       break;
+  //       case 5 :
+  //       {
+  //         var namabulan = 'Mei';
+  //       }
+  //       break;
+  //       case 6 :
+  //       {
+  //         var namabulan = 'Juni';
+  //       }
+  //       break;
+  //       case 7 :
+  //       {
+  //         var namabulan = 'Juli';
+  //       }
+  //       break;
+  //       case 8 :
+  //       {
+  //         var namabulan = 'Agustus';
+  //       }
+  //       break;
+  //       case 9 :
+  //       {
+  //         var namabulan = 'September';
+  //       }
+  //       break;
+  //       case 10 :
+  //       {
+  //         var namabulan = 'oktober';
+  //       }
+  //       break;
+  //       case 11 :
+  //       {
+  //         var namabulan = 'November';
+  //       }
+  //       break;case 12 :
+  //       {
+  //         var namabulan = 'Desember';
+  //       }
+  //       break;
+  //     }
+  //     print(tanggal);
+  //     print(namabulan);
+  //     print(tahun);
+  //   }
+  //   else{
+  //     print("Tahun tidak valid");
+  //   }
+  // }
+  // else{
+  //   print("tanggal tidak valid");
+  // }
 }
