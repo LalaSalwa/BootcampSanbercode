@@ -38,18 +38,18 @@
 // }
 
 
-//no.4 Function
-void main(){
-  var angka = 6;
-  int hasil = pemfaktor(angka);
-  print(hasil);
-}
+// //no.4 Function
+// void main(){
+//   var angka = 6;
+//   int hasil = pemfaktor(angka);
+//   print(hasil);
+// }
 
-pemfaktor(int n){
-  int faktor = 1;
-  int i = 1;
-  for (i = 1; i <= n; i++){
-    faktor *= i ;
-  }
-  return faktor;
-}
+// pemfaktor(int n){
+//   int faktor = 1;
+//   int i = 1;
+//   for (i = 1; i <= n; i++){
+//     faktor *= i ;
+//   }
+//   return faktor;
+// }
