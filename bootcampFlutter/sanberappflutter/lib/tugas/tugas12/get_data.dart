@@ -74,9 +74,9 @@ class _getDataScreenState extends State<GetDataScreen> {
                               SizedBox(width: 10),
                               Column(
                                 children: [
-                                  Text(data![index]["first-name"] + 
+                                  Text(data![index]["first_name"] + 
                                       " " +
-                                      data![index]["last-name"]),
+                                      data![index]["last_name"]),
                                   Text(data![index]["email"]),
                                 ],
                               )
