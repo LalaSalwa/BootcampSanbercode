@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "867879643898",
+    "project_id": "latihan-authetikasi",
+    "storage_bucket": "latihan-authetikasi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867879643898:android:390e97d58fd24d6787b743",
+        "android_client_info": {
+          "package_name": "com.example.auth_google_email_password"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx4A3uIkjrY4_twKF4kWX2m0_puKOlpQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867879643898:android:fd1d1c3b7bf3228d87b743",
+        "android_client_info": {
+          "package_name": "com.example.sanberappflutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAx4A3uIkjrY4_twKF4kWX2m0_puKOlpQc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
