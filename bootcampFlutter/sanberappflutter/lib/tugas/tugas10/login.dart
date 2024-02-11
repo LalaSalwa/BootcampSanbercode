@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sanberappflutter/tugas/tugas10/Homescreen.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context){
@@ -34,12 +34,12 @@ class LoginScreen extends StatelessWidget {
               Container(
                 height: 50,
                 width: double.infinity,
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Color(0xff475BD8)),
+                  border: Border.all(color: const Color(0xff475BD8)),
                   borderRadius: BorderRadius.circular(10)),
                 child: TextFormField(
-                  decoration: InputDecoration.collapsed(hintText: "Email"),
+                  decoration: const InputDecoration.collapsed(hintText: "Email"),
                 ),
               ),
               const SizedBox(
@@ -48,12 +48,12 @@ class LoginScreen extends StatelessWidget {
               Container(
                 height: 50,
                 width: double.infinity,
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Color(0xff475BD8)),
+                  border: Border.all(color: const Color(0xff475BD8)),
                   borderRadius: BorderRadius.circular(10)),
                 child: TextFormField(
-                  decoration: InputDecoration.collapsed(hintText: "Password"),
+                  decoration: const InputDecoration.collapsed(hintText: "Password"),
                 ),
               ),
               const SizedBox(
@@ -61,7 +61,7 @@ class LoginScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
                   }, 
                 child: const Text(
                     "Login",

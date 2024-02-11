@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class PageOne extends StatelessWidget {
-  const PageOne({Key? key}) : super(key: key);
+  const PageOne({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,12 +12,12 @@ class PageOne extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Halaman 1"),
+            const Text("Halaman 1"),
             ElevatedButton(
               onPressed: () {
                 Get.toNamed(RouteName.page_2);
               }, 
-              child: Text("Menuju Halaman 2"))
+              child: const Text("Menuju Halaman 2"))
           ],
         ),
       ),

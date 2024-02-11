@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 class GetDetailDataScreen  extends StatefulWidget {
   int? value;
-  GetDetailDataScreen({Key? key, this.value}) : super(key: key); 
+  GetDetailDataScreen({super.key, this.value}); 
 
   @override
   State<GetDetailDataScreen> createState() => _GetDetailDataScreen(value);
@@ -22,7 +22,7 @@ class _GetDetailDataScreen extends State<GetDetailDataScreen> {
     var url = 'https://reqres.in/api/userts/${value.toString()}';
     _getRefreshData(url);
     super.initState();
-    print('Cek parameter +${value}');
+    print('Cek parameter +$value');
   }
 
   Future<void> _getRefreshData(url) async{
@@ -46,7 +46,7 @@ class _GetDetailDataScreen extends State<GetDetailDataScreen> {
   Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text('Get detail data api regres'),
+        title: const Text('Get detail data api regres'),
       ),
       body: Container(
         child: data == null
@@ -57,7 +57,7 @@ class _GetDetailDataScreen extends State<GetDetailDataScreen> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6),
                   color: Colors.grey,),
-                child: Column(
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     CircularProgressIndicator(),

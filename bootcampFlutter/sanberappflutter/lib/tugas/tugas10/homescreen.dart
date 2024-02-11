@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'drawerscreen.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(title: Text("home screen"),),
-      drawer: DrawerScreen(),
+      appBar: AppBar(title: const Text("home screen"),),
+      drawer: const DrawerScreen(),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -31,13 +31,13 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          padding: EdgeInsets.all(16),
-          margin: EdgeInsets.only(top: 40),
+          padding: const EdgeInsets.all(16),
+          margin: const EdgeInsets.only(top: 40),
           color: Colors.white,
           child: ListView(
 
             children: [
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
@@ -55,36 +55,36 @@ class HomeScreen extends StatelessWidget {
               ),
               Container(
                 alignment: Alignment.centerLeft,
-                child: Text(
+                child: const Text(
                   "Your Dream Jobs",
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.w800),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                   height: 20,
               ),
               Container(
                 height: 50,
                 width: double.infinity,
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(color: Colors.grey)),
                 child: TextFormField(
-                  decoration: InputDecoration.collapsed(
+                  decoration: const InputDecoration.collapsed(
                     hintText: "Search jobs or Position"),),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
                 alignment: Alignment.centerLeft,
-                child: Text(
+                child: const Text(
                   "Jobs For You",
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 40,
               ),
               jobs_items(context)
@@ -94,8 +94,8 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-  Container jobs_items(BuildContext context){
-    return Container(
+  SizedBox jobs_items(BuildContext context){
+    return SizedBox(
       height:MediaQuery.of(context).size.height / 2,
       child: GridView.count(
         primary: false,
@@ -107,7 +107,7 @@ class HomeScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: Color(0xffFFEBE7),
+              color: const Color(0xffFFEBE7),
               borderRadius: BorderRadius.circular(10),),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -118,21 +118,21 @@ class HomeScreen extends StatelessWidget {
                   height: 20,
                   width: 20,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(
                   "Digital Marketing",
                   style: titlestyle(),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(
                   "1-3 Year Experience",
                   style: subTitle(),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Row(
@@ -141,7 +141,7 @@ class HomeScreen extends StatelessWidget {
                       "Fulltime",
                       style: positionText(),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
                     Text(
@@ -156,7 +156,7 @@ class HomeScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: Color(0xffFFEBE7),
+              color: const Color(0xffFFEBE7),
               borderRadius: BorderRadius.circular(10),),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -167,21 +167,21 @@ class HomeScreen extends StatelessWidget {
                   height: 20,
                   width: 20,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(
                   "Content Creator",
                   style: titlestyle(),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(
                   "1-3 Year Experience",
                   style: subTitle(),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Row(
@@ -190,7 +190,7 @@ class HomeScreen extends StatelessWidget {
                       "Fulltime",
                       style: positionText(),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
                     Text(
@@ -205,7 +205,7 @@ class HomeScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: Color(0xffFFEBE7),
+              color: const Color(0xffFFEBE7),
               borderRadius: BorderRadius.circular(10),),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -216,21 +216,21 @@ class HomeScreen extends StatelessWidget {
                   height: 20,
                   width: 20,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(
                   "Content Creator",
                   style: titlestyle(),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(
                   "1-3 Year Experience",
                   style: subTitle(),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Row(
@@ -239,7 +239,7 @@ class HomeScreen extends StatelessWidget {
                       "Fulltime",
                       style: positionText(),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
                     Text(
@@ -254,7 +254,7 @@ class HomeScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: Color(0xffFFEBE7),
+              color: const Color(0xffFFEBE7),
               borderRadius: BorderRadius.circular(10),),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -265,21 +265,21 @@ class HomeScreen extends StatelessWidget {
                   height: 20,
                   width: 20,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(
                   "Content Creator",
                   style: titlestyle(),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Text(
                   "1-3 Year Experience",
                   style: subTitle(),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Row(
@@ -288,7 +288,7 @@ class HomeScreen extends StatelessWidget {
                       "Fulltime",
                       style: positionText(),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 16,
                     ),
                     Text(
@@ -306,12 +306,12 @@ class HomeScreen extends StatelessWidget {
   }
 
   TextStyle positionText(){
-    return TextStyle(color: Colors.grey, fontWeight: FontWeight.w400);
+    return const TextStyle(color: Colors.grey, fontWeight: FontWeight.w400);
   }
 
-  TextStyle subTitle() => TextStyle(fontWeight: FontWeight.w500);
+  TextStyle subTitle() => const TextStyle(fontWeight: FontWeight.w500);
 
   TextStyle titlestyle(){
-    return TextStyle(fontSize: 15, fontWeight: FontWeight.w700);
+    return const TextStyle(fontSize: 15, fontWeight: FontWeight.w700);
   }
 }

@@ -1,9 +1,10 @@
 import 'loginscreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   Future<void> _signOut() async{
     await FirebaseAuth.instance.signOut();
   }
@@ -20,40 +21,40 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 60,),
+            const SizedBox(height: 60,),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                IconButton(onPressed: () {}, icon: Icon(Icons.notifications)),
-                IconButton(onPressed: () {}, icon: Icon(Icons.extension)),
+                IconButton(onPressed: () {}, icon: const Icon(Icons.notifications)),
+                IconButton(onPressed: () {}, icon: const Icon(Icons.extension)),
               ],
             ),
-            SizedBox(height: 37,),
+            const SizedBox(height: 37,),
             Text.rich(
               TextSpan(
                 children: <TextSpan>[
-                  TextSpan(
+                  const TextSpan(
                     text: "welcome, \n",
                     style: TextStyle(color: Colors.blue),
                   ),
                   TextSpan(
                     text: auth.currentUser!.email,
-                    style: TextStyle(color: Colors.blue),
+                    style: const TextStyle(color: Colors.blue),
                   )
                 ]
                 ),
-                style: TextStyle(fontSize: 30),
+                style: const TextStyle(fontSize: 30),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             TextField(
               decoration: InputDecoration(
-                prefixIcon: Icon(Icons.search, size: 18,),
+                prefixIcon: const Icon(Icons.search, size: 18,),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10)),
                 hintText: "search"),
             ),
-            SizedBox(height: 10,),
-            Text(
+            const SizedBox(height: 10,),
+            const Text(
               "Recomended Place",
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
             ),
@@ -62,9 +63,9 @@ class HomeScreen extends StatelessWidget {
               onPressed: (){
                 _signOut().then((value) => Navigator.of(context)
                     .pushReplacement(MaterialPageRoute(
-                      builder: (context) => LoginScreen())));
+                      builder: (context) => const LoginScreen())));
               }, 
-              child: Text('Logout')
+              child: const Text('Logout')
               ),)
           ],
         ), 

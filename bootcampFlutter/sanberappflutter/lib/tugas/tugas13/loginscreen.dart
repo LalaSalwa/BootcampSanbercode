@@ -3,6 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
@@ -29,7 +31,7 @@ class _LoginScreenState extends State<LoginScreen> {
           .signInWithEmailAndPassword(
             email: _emailController.text, password: _passwordController.text)
             .then((value) => Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => HomeScreen())));
+              MaterialPageRoute(builder: (context) => const HomeScreen())));
     } catch (e) {
       print(e);
       SnackBar(content: Text(e.toString()));
@@ -40,14 +42,14 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         child: ListView(
           children: <Widget> [
             Container(
               alignment: Alignment.center,
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               margin: const EdgeInsets.only(top: 40),
-              child: Text(
+              child: const Text(
                 "Latihan Auth",
                 style: TextStyle(
                   color: Colors.blue,
@@ -64,44 +66,41 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
             Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: TextField(
                 controller: _emailController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(), labelText: "Username"),
               )),
             Container(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: TextField(
                 controller: _passwordController,
                 obscureText: true,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(), labelText: "Password"),
               )),
             TextButton(
               onPressed: () {}, 
-              child: Text("Forgot Password")
+              child: const Text("Forgot Password")
             ),
             Container(
               height: 50,
-              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
               child: ElevatedButton(
                 style: raisedButtonstyle,
-                child: Text("Register"),
+                child: const Text("Register"),
 
-
-
-                
                 onPressed: () {
                   registerSubmit();
                 })),
-            SizedBox(height: 10,),
+            const SizedBox(height: 10,),
             Container(
               height: 50,
-              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
               child: ElevatedButton(
                 style: raisedButtonstyle,
-                child: Text("Login"),
+                child: const Text("Login"),
                 onPressed: () {
                   loginSubmit();
                 } , 
@@ -114,10 +113,9 @@ class _LoginScreenState extends State<LoginScreen> {
 }
 
 final ButtonStyle raisedButtonstyle = ElevatedButton.styleFrom(
-  onPrimary: Colors.grey,
-  primary: Colors.blue,
-  minimumSize: Size(88, 36),
-  padding: EdgeInsets.symmetric(horizontal: 16),
+  foregroundColor: Colors.grey, backgroundColor: Colors.blue,
+  minimumSize: const Size(88, 36),
+  padding: const EdgeInsets.symmetric(horizontal: 16),
   shape: const RoundedRectangleBorder(
     borderRadius: BorderRadius.all(Radius.circular(6))
   ),

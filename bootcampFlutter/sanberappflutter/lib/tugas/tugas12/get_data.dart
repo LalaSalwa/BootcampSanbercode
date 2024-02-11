@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:sanberappflutter/tugas/tugas12/get_detail_screen.dart';
 
 class GetDataScreen extends StatefulWidget {
-  const GetDataScreen({Key? key}) : super(key: key);
+  const GetDataScreen({super.key});
 
   @override
   State<GetDataScreen> createState() => _getDataScreenState();
@@ -20,7 +20,7 @@ class _getDataScreenState extends State<GetDataScreen> {
   }
 
   Future<void> _getRefreshDaata() async{
-    this.getJsonData(context);
+    getJsonData(context);
   }
 
   Future<void> getJsonData(BuildContext context) async {
@@ -37,17 +37,17 @@ class _getDataScreenState extends State<GetDataScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar : AppBar(
-        title: Text("Get data api regres"),
+        title: const Text("Get data api regres"),
       ),
       body: RefreshIndicator(
         onRefresh: _getRefreshDaata,
         child: data == null
-            ? Center(child: CircularProgressIndicator(),)
+            ? const Center(child: CircularProgressIndicator(),)
             : ListView.builder(
               itemCount: data == null ? 0 : data!.length,
               itemBuilder: (BuildContext context, int index) {
                 return Container(
-                  padding: EdgeInsets.all(5.0),
+                  padding: const EdgeInsets.all(5.0),
                   child: Column(
                     children: [
                       GestureDetector(
@@ -61,7 +61,7 @@ class _getDataScreenState extends State<GetDataScreen> {
                           print(data![index]["id"]);
                         },
                         child: Padding(
-                          padding: EdgeInsets.all(16.0),
+                          padding: const EdgeInsets.all(16.0),
                           child: Row(
                             children: [
                               ClipRRect(
@@ -71,7 +71,7 @@ class _getDataScreenState extends State<GetDataScreen> {
                                   width : 80,
                                 ),
                               ),
-                              SizedBox(width: 10),
+                              const SizedBox(width: 10),
                               Column(
                                 children: [
                                   Text(data![index]["first_name"] + 
@@ -84,7 +84,7 @@ class _getDataScreenState extends State<GetDataScreen> {
                           ),
                         ),
                       ),
-                      Divider()
+                      const Divider()
                     ],
                   ),
                 );

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DrawerScreen extends StatefulWidget {
+  const DrawerScreen({super.key});
+
   @override
   _DrawerScreenState createState() => _DrawerScreenState();
 }
@@ -11,7 +13,7 @@ class _DrawerScreenState extends State<DrawerScreen>{
     return Drawer(
       child: ListView(
         children: <Widget>[
-          UserAccountsDrawerHeader(
+          const UserAccountsDrawerHeader(
             accountName: Text("Lala Salwa"),
             currentAccountPicture: 
               CircleAvatar(backgroundImage: AssetImage("asset/img/lala.JPG")), 
@@ -58,8 +60,7 @@ class DrawerListTile extends StatelessWidget {
   final VoidCallback? onTilePressed;
 
   const DrawerListTile(
-    {Key? key, this.iconData, this.title, this.onTilePressed})
-    : super(key: key);
+    {super.key, this.iconData, this.title, this.onTilePressed});
   @override
   Widget build(BuildContext context){
     return ListTile(
@@ -68,7 +69,7 @@ class DrawerListTile extends StatelessWidget {
       leading: Icon(iconData),
       title: Text(
         title!,
-        style:  TextStyle(fontSize: 16),
+        style:  const TextStyle(fontSize: 16),
       ),
     );
   }

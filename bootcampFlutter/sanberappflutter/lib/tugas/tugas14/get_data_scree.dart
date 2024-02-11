@@ -3,19 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class GetDataScreenStateManagament extends StatelessWidget {
-  const GetDataScreenStateManagament ({Key? key}) : super(key: key); 
+  const GetDataScreenStateManagament ({super.key}); 
   @override
   Widget build(BuildContext context){
     var controller = Get.put(AppController());
     return Scaffold(
       appBar: AppBar(
-        title: Text("State Management Getx"),
+        title: const Text("State Management Getx"),
       ),
       body: Column(
         children: [
           Expanded(child: Obx(() {
             return controller.postloading.value
-              ? Center(
+              ? const Center(
                 child: CircularProgressIndicator(),
               )
               : ListView.builder(

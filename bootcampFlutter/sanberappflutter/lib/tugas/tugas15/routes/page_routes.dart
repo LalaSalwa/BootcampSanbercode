@@ -8,15 +8,15 @@ class pageRouteApp {
   static final pages = [
     GetPage(
       name: RouteName.page_1, 
-      page: () => PageOne(),
+      page: () => const PageOne(),
     ),
     GetPage(
       name: RouteName.page_2, 
-      page: () => PageTwo(),
+      page: () => const PageTwo(),
     ),
     GetPage(
       name: RouteName.page_3, 
-      page: () => PageThree(),
+      page: () => const PageThree(),
     ),
   ];
 }
